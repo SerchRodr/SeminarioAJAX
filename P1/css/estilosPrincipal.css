@@ -1,0 +1,107 @@
+@font-face {
+    font-family: ReportRegular;
+    src: url(ReportRegular.ttf);
+}
+.cuerpo {
+    background-image: url("prometeo.jpg");
+}
+#estiloUser {
+    width:150px;
+    height:30px;
+    position: relative;
+    top: 200px; left: 43%;
+    border-radius:15px;
+    font-family:ReportRegular;
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+}
+
+#estiloPassword {
+    width:150px;
+    height:30px;
+    position: relative;
+    top: 300px; left: 43%;
+    border-radius:15px;
+    font-family:ReportRegular;
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+}
+
+#estiloBoton {
+    width:100px;
+    height:30px;
+    position: relative;
+    top: 400px; left: 45%;
+    border-radius:15px;
+    font-family:ReportRegular;
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+    background-color:#fec830;
+}
+
+.iniciosesion {
+    background-color: #FBEB4F;
+}
+
+#bienvenida {
+    font-family: ReportRegular;
+    color: #4194ED;
+}
+
+#opciones {
+    font-family: ReportRegular;
+}
+
+.video {
+    font-family: ReportRegular;
+}
+
+.audio {
+    font-family: ReportRegular;
+}
+
+.images {
+    font-family: ReportRegular;
+}
+
+#arbol {
+    width: 300px;
+    height: 300px;
+}
+
+#wallpaper {
+    width: 600px;
+    height: 400px;
+}
+
+#leon {
+    width: 300px;
+    height: 300px;
+}
+
+#contador {
+    width:200px;
+    height:50px;
+    position: relative;
+    border-radius:15px;
+    font-family:ReportRegular;
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+    background-color:#fec830;
+}
+
+#concatena {
+    width:200px;
+    height:50px;
+    position: relative;
+    border-radius:15px;
+    font-family:ReportRegular;
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+    background-color:#fec830;
+}

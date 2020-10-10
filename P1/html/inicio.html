@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Inicio</title>
+        <link href="../css/estilosPrincipal.css" rel="stylesheet" type="text/css">
+        <script src="../js/redirecciones.js"></script>
+    </head>
+
+    <body class="iniciosesion">
+        <h1 id="bienvenida"> Bienvenido al incio</h1>
+        <h3 id ="opciones">
+            Usted puede realizar las siguientes opciones:
+            <ul>
+                <li>Ver Video</li>
+                <li>Escuchar un Audio</li>
+                <li>Ver Fotos</li>
+            </ul>
+            <br>
+        </h3>
+        
+        
+        <div class="video">
+            Este es el video<br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1ZgVh5jtylY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br>
+        </div>
+
+        <div class="audio">
+            Este es el audio<br>
+            <audio controls>
+                <source src="sunflower.mp3" type="audio/mp3">
+            </audio>
+            <br>
+        </div>
+        
+
+        <div class="images">
+            Estas son las imagenes<br>
+            <img id="arbol" src="arbol.jpg">
+            <img id="wallpaper" src="wallpaper.jpg">
+            <img id="leon" src="leon.jpg">
+        </div>
+
+        <div>
+            <button onclick="cuenta(10)" id="contador">Cuenta</button>
+            <br>
+            <button onclick="concatena()" id="concatena">Concatenar</button>
+        </div>
+    </body>
+</html>
