@@ -1,0 +1,89 @@
+@font-face {
+    font-family: ReportRegular;
+    src: url(ReportRegular.ttf);
+}
+
+.formulario{
+  background-image: url("../images/prometeo.jpg");
+  background-size: cover;
+}
+
+#titulo{
+  font-family: ReportRegular;
+}
+
+.campos{
+  width:150px;
+  height:30px;
+  position: relative;
+  top: 200px; left: 20%;
+  border-radius:15px;
+  font-family:ReportRegular;
+  font-weight: bold;
+  font-size: 200%;
+  text-align: center;
+}
+
+#user{
+  border-radius:15px;
+  width: 300px;
+  height: 40px;
+  font-size: 80%;
+  font-family: ReportRegular;
+  font-weight: bold;
+}
+
+#password{
+  border-radius:15px;
+  width: 300px;
+  height: 40px;
+  font-size: 80%;
+  font-family: ReportRegular;
+  font-weight: bold;
+}
+
+#submit{
+  width: 100px;
+  height: 30px;
+  border-radius:15px;
+  background-color: yellow;
+  font-size: 80%;
+  font-weight: bold;
+  font-family: ReportRegular;
+}
+
+.imagen{
+  width: 40%;
+  height: 30%;
+}
+
+.tabla{
+  font-family: ReportRegular;
+  background-image: url("../images/estadioWallpaper.jpg");
+  background-size: contain;
+}
+
+.tablaEquipos{
+  border: 1px solid #000;
+  background-color: lightblue;
+  margin-left: 25%;
+}
+
+td, th{
+  border: 1px solid #000;
+  padding: 0%;
+  margin: 0%;
+}
+
+#logoNFL{
+  float: left;
+}
+
+#logoAFC{
+  float: right;
+}
+
+#autor{
+  font-weight: bold;
+  font-size: 20px;
+}
