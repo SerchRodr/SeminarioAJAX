@@ -1,0 +1,62 @@
+@font-face {
+    font-family: FireBrathers;
+    src: url(FireBrathers.otf);
+}
+
+@font-face {
+  font-family: ReportRegular;
+  src: url(ReportRegular.ttf);
+}
+
+@font-face {
+  font-family: OrangeJuice;
+  src: url(orangejuice2.ttf);
+}
+
+.pagina{
+  background-color: #6495ED;
+  font-family: OrangeJuice;
+  font-size: 40px;
+  color: black;
+}
+
+
+#title{
+  font-family: FireBrathers;
+  font-size: 65px;
+  color: black;
+}
+
+.submit{ 
+  border-radius:15px;
+  width: 150px;
+  height: 60px;
+  position: relative;
+  font-family:ReportRegular;
+  font-weight: bold;
+  font-size: 60%;
+  text-align: center;
+  background-color:#fec830;
+}
+
+#user{
+  width:150px;
+  height:30px;
+  position: relative;
+  border-radius:15px;
+  text-align: center;
+  font-family:ReportRegular;
+  font-weight: bold;
+  font-size: 75%;
+}
+
+#password{
+  width:150px;
+  height:30px;
+  position: relative;
+  border-radius:15px;
+  text-align: center;
+  font-family:ReportRegular;
+  font-weight: bold;
+  font-size: 75%;
+}
