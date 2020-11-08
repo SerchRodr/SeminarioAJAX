@@ -7,16 +7,21 @@ package servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import servlets.Conexion;
+
 
 /**
  *
  * @author Sergio Rodríguez.
  */
+@WebServlet(name = "Conexion", urlPatterns = {"/Conexion"})
 public class Peticiones extends HttpServlet {
 
     /**
@@ -33,9 +38,11 @@ public class Peticiones extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         Conexion login = new Conexion();
         String mensaje = "";
-        boolean loginCheck = login.inciarConexion(request.getParameter("user"), request.getParameter("password"));
-        if(loginCheck){
-            mensaje = "Bienvenido" + request.getParameter("user");
+        String user = request.getParameter("user");
+        String password = request.getParameter("password");
+        boolean loginCheck = login.inciarConexion(user, password);
+        if(loginCheck==true){
+            mensaje = "Bienvenido " + request.getParameter("user");
         } else {
             mensaje = "No se ha encontrado el usuario";
         }
@@ -44,9 +51,10 @@ public class Peticiones extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Inicio</title>");            
+            out.println("<title>Inicio</title>");
+            out.println("<link href='css/estilos.css' rel='stylesheet' type='text/css'>");
             out.println("</head>");
-            out.println("<body>");
+            out.println("<body class='pagina'>");
             out.println("<h1>" + mensaje + "</h1>");
             out.println("</body>");
             out.println("</html>");
@@ -65,6 +73,8 @@ public class Peticiones extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setHeader("Access-Control-Request-Method", "GET");
         processRequest(request, response);
     }
 
@@ -79,6 +89,8 @@ public class Peticiones extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setHeader("Access-Control-Request-Method", "POST");
         processRequest(request, response);
     }
 
