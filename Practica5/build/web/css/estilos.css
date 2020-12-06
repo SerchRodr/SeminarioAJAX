@@ -1,0 +1,76 @@
+@font-face {
+    font-family: FireBrathers;
+    src: url(FireBrathers.otf);
+}
+
+@font-face {
+  font-family: ReportRegular;
+  src: url(ReportRegular.ttf);
+}
+
+@font-face {
+  font-family: OrangeJuice;
+  src: url(orangejuice2.ttf);
+}
+
+.pagina{
+  background-color: #6495ED;
+  font-family: OrangeJuice;
+  font-size: 30px;
+  color: black;
+}
+
+
+#titulo{
+  font-family: FireBrathers;
+  font-size: 30px;
+  color: black;
+}
+
+.submit{ 
+  border-radius:15px;
+  width: 150px;
+  height: 60px;
+  position: relative;
+  font-family:ReportRegular;
+  font-weight: bold;
+  font-size: 60%;
+  text-align: center;
+  background-color:#fec830;
+}
+
+#user{
+  width:150px;
+  height:30px;
+  position: relative;
+  border-radius:15px;
+  text-align: center;
+  font-family:ReportRegular;
+  font-weight: bold;
+  font-size: 75%;
+}
+
+#password{
+  width:150px;
+  height:30px;
+  position: relative;
+  border-radius:15px;
+  text-align: center;
+  font-family:ReportRegular;
+  font-weight: bold;
+  font-size: 75%;
+}
+
+#myContainer{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: lightyellow;
+}
+
+#myAnimation{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+}

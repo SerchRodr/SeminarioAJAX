@@ -1,0 +1,2 @@
+<h3>Función que solicita un archivo txt de manera síncrona</h3>
+<img src="images/avengers.jpg" alt="bumblebee" width="300" height"300">

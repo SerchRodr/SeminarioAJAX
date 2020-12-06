@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Práctica 4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" language = "javascript">
+            var xhr;
+            
+            function revisaAJAX(){
+                if(window.ActiveXObject){
+                    xhr = new ActiveXObject("Microsoft.XMLHttp");
+                }
+                else if((window.XMLHttpRequest) || (typeof XMLHttpRequest) != undefined){
+                    xhr = new XMLHttpRequest();
+                }
+                else{
+                    alert("El navegador no tiene soporte para AJAX");
+                    close("index.html");
+                }
+            }
+            
+            function pideTXT(){
+                xhr.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        document.getElementById("texto1").innerHTML = this.responseText;
+                    }
+                };
+                xhr.open("GET", "archivos/texto1.txt", true);
+                xhr.send();
+            }
+            
+            function loadDocSync(){
+                xhr.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        document.getElementById("sincrono").innerHTML = this.responseText;
+                    }
+                };
+                xhr.open("GET", "archivos/texto4.txt", false);
+                xhr.send();
+            }
+            
+            function myMove(){
+                var elem = document.getElementById("myAnimation");
+                var pos = 0;
+                var id = setInterval(frame, 10);
+                function frame(){
+                    if(pos == 350){
+                        clearInterval(id);
+                    } else{
+                        pos++;
+                        elem.style.top = pos + 'px';
+                        elem.style.left = pos + 'px';
+                    }
+                }
+            }
+            
+            function loadDoc(url, otraFuncion){
+                xhr.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        otraFuncion(this);
+                    }
+                };
+                xhr.open("GET", url, true);
+                xhr.send();
+            }
+            
+            function funcion2(xhr){
+                document.getElementById("texto2").innerHTML = xhr.responseText;
+            }
+            
+        </script>
+            
+    </head>
+    <body onload="revisaAJAX()" class="pagina">
+        <header id="titulo">
+          <h1>Práctica 5. Peticiones con AJAX.</h1>
+        </header>
+        
+        <h3>Inicio de sesión</h3>
+        <form action="Peticiones" method="post">
+            Usuario: <input type="text"     name="user"   id="user"><br>
+            Password: <input type="password" name="password"   id="password"><br>
+            <br>
+            <input type="submit"   value="Enviar" class="submit">
+        </form>
+        
+        <button onclick="myMove()" class="submit">Animar</button>
+        <div id="myContainer">
+            <div id="myAnimation"></div>
+            
+        </div>
+        
+        <div id="texto1">
+            <h3>Función que solicita archivo txt del servidor</h3>
+            <button type="button" onclick="pideTXT()" class="submit">Pedir txt</button>
+        </div>
+        
+        <div id="texto2">
+            <h3>Función que recibe como parámetro una url</h3>
+            <button type="button" onclick="loadDoc('archivos/texto2.txt', funcion2)" class="submit">
+                Actualizar
+            </button>
+        </div>
+        
+        <div id="sincrono">
+            <h3>Función que solicita un txt de manera síncrona</h3>
+            <button type="button" onclick="loadDocSync()" class="submit">Cargar text</button>
+        </div>
+    </body>
+</html>
+

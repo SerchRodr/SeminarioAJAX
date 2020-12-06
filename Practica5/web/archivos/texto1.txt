@@ -1,0 +1,2 @@
+<h3>Función que solicita un archivo txt al servidor</h3>
+<img src="images/bumblebee.jpg" alt="bumblebee" width="300" height"300">
